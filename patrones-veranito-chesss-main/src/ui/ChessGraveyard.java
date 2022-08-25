@@ -1,5 +1,8 @@
+package ui;
 import java.awt.GridLayout;
 import javax.swing.*;
+
+import pieces.ChessGamePiece;
 // -------------------------------------------------------------------------
 /**
  * Represents the graveyard where pieces lie after being captured.

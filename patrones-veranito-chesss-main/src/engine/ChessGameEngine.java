@@ -1,6 +1,14 @@
+package engine;
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+
+import board.BoardSquare;
+import board.ChessGameBoard;
+import pieces.ChessGamePiece;
+import pieces.King;
+import ui.ChessPanel;
+
 import java.awt.event.MouseEvent;
 // -------------------------------------------------------------------------
 /**
@@ -138,16 +146,16 @@ public class ChessGameEngine{
     public boolean isKingInCheck( boolean checkCurrent ){
         if ( checkCurrent ){
             if ( currentPlayer == 1 ){
-                return king1.isChecked( board );
+                return king1.isEmpty( board );
             }
-            return king2.isChecked( board );
+            return king2.isEmpty( board );
         }
         else
         {
             if ( currentPlayer == 2 ){
-                return king1.isChecked( board );
+                return king1.isEmpty( board );
             }
-            return king2.isChecked( board );
+            return king2.isEmpty( board );
         }
     }
     /**
@@ -213,18 +221,18 @@ public class ChessGameEngine{
      *         still valid game.
      */
     public int determineGameLost(){
-        if ( king1.isChecked( board ) && !playerHasLegalMoves( 1 ) ) // player 1
+        if ( king1.isEmpty( board ) && !playerHasLegalMoves( 1 ) ) // player 1
         // loss
         {
             return 1;
         }
-        if ( king2.isChecked( board ) && !playerHasLegalMoves( 2 ) ) // player 2
+        if ( king2.isEmpty( board ) && !playerHasLegalMoves( 2 ) ) // player 2
         // loss
         {
             return 2;
         }
-        if ( ( !king1.isChecked( board ) && !playerHasLegalMoves( 1 ) )
-            || ( !king2.isChecked( board ) && !playerHasLegalMoves( 2 ) )
+        if ( ( !king1.isEmpty( board ) && !playerHasLegalMoves( 1 ) )
+            || ( !king2.isEmpty( board ) && !playerHasLegalMoves( 2 ) )
             || ( board.getAllWhitePieces().size() == 1 &&
                 board.getAllBlackPieces().size() == 1 ) ) // stalemate
         {

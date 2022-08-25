@@ -1,8 +1,19 @@
+package board;
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.Color;
 import javax.swing.JPanel;
+
+import pieces.Bishop;
+import pieces.ChessGamePiece;
+import pieces.King;
+import pieces.Knight;
+import pieces.Pawn;
+import pieces.Queen;
+import pieces.Rook;
+import ui.ChessPanel;
+
 import java.awt.GridLayout;
 // -------------------------------------------------------------------------
 /**

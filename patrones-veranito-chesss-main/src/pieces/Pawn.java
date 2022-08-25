@@ -1,4 +1,8 @@
+package pieces;
 import javax.swing.ImageIcon;
+
+import board.ChessGameBoard;
+
 import java.util.ArrayList;
 // -------------------------------------------------------------------------
 /**

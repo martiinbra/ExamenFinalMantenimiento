@@ -1,5 +1,8 @@
+package board;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import pieces.ChessGamePiece;
 // -------------------------------------------------------------------------
 /**
  * Represents a cell on the chess board. Holds a game piece.
@@ -9,8 +12,7 @@ import javax.swing.JPanel;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class BoardSquare
-    extends JPanel{
+public class BoardSquare extends JPanel{
     private int            row;
     private int            col;
     private ChessGamePiece piece;

@@ -1,5 +1,9 @@
+package ui;
 import java.awt.*;
 import javax.swing.*;
+
+import board.ChessGameBoard;
+import engine.ChessGameEngine;
 // -------------------------------------------------------------------------
 /**
  * The main panel of the Chess game.
